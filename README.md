@@ -30,7 +30,7 @@ https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank
 
 ---
 
-## ⚙️ Configuration Steps
+## ✅ TO DO
 
 1. Basic settings on all devices + SSH on routers and L3 switches
 2. VLAN assignment + trunk and access port configuration
@@ -44,6 +44,59 @@ https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank
 10. Verification and testing
 
 ---
+
+```
+                        [ Server Room ]
+                              |
+              ┌───────────────┼───────────────┐
+              |               |               |
+         [F1-Router]    [F2-Router]    [F3-Router]    [F4-Router]
+              |               |               |               |
+         [F1-L3sw]      [F2-L3sw]      [F3-L3sw]      [F4-L3sw]
+              |               |               |               |
+         [L2 Switches]  [L2 Switches]  [L2 Switches]  [L2 Switches]
+              |               |               |               |
+          End Devices     End Devices     End Devices     End Devices
+```
+
+---
+
+## ⚙️ Configuration Steps
+
+| # | Step | Details |
+|---|------|---------|
+| 1 | **Basic Settings + SSH** | Hostname, passwords, banner, password encryption, SSH on all routers and L3 switches |
+| 2 | **VLANs + Port Configuration** | VLAN assignment, trunk ports (Fa0/1-2), access ports (Fa0/3-24) on all switches |
+| 3 | **Switchport Security** | MAC sticky, max 2 devices, violation shutdown on all 12 L2 switches |
+| 4 | **Subnetting & IP Addressing** | /26 subnets for VLANs, /30 for backbone point-to-point links |
+| 5 | **OSPF Routing** | Dynamic routing configured on all routers and L3 switches in Area 0 |
+| 6 | **Static IPs — Server Room** | Fixed IP addresses for DHCP, DNS, and file servers |
+| 7 | **DHCP Server** | Centralized DHCP with separate pools for each VLAN subnet |
+| 8 | **Inter-VLAN Routing** | L3 switch SVIs with `ip helper-address` relay to DHCP server |
+| 9 | **Wireless Network** | Access points configured at each branch |
+| 10 | **Verification & Testing** | `show` commands + ping tests across all VLANs and branches |
+
+---
+
+## 🌐 VLAN Design
+
+| VLAN ID | Department | Subnet | Gateway | Branch |
+|---------|-----------|--------|---------|--------|
+| VLAN 10 | HR / Mgmt | 192.168.10.0/26 | 192.168.10.1 | F1/F2 |
+| VLAN 20 | Accounts | 192.168.10.64/26 | 192.168.10.65 | F1/F2 |
+| VLAN 30 | Marketing | 192.168.10.128/26 | 192.168.10.129 | F1/F2 |
+| VLAN 40 | Dept 4 | 192.168.10.192/26 | 192.168.10.193 | F1/F2 |
+| VLAN 50 | Dept 5 | 192.168.11.0/26 | 192.168.11.1 | F1/F2 |
+| VLAN 60 | Dept 6 | 192.168.11.64/26 | 192.168.11.65 | F1/F2 |
+| VLAN 70 | Dept 7 | 192.168.11.128/26 | 192.168.11.129 | F3/F4 |
+| VLAN 80 | Dept 8 | 192.168.11.192/26 | 192.168.11.193 | F3/F4 |
+| VLAN 90 | Dept 9 | 192.168.12.0/26 | 192.168.12.1 | F3/F4 |
+| VLAN 100 | Dept 10 | 192.168.12.64/26 | 192.168.12.65 | F3/F4 |
+| VLAN 110 | Dept 11 | 192.168.12.128/26 | 192.168.12.129 | F3/F4 |
+| VLAN 120 | Server Room | 192.168.12.192/26 | 192.168.12.193 | Server Room |
+
+---
+
 
 ## 🔐 Security Features
 
