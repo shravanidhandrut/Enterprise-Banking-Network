@@ -45,20 +45,6 @@ https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank
 
 ---
 
-```
-                        [ Server Room ]
-                              |
-              ┌───────────────┼───────────────┐
-              |               |               |
-         [F1-Router]    [F2-Router]    [F3-Router]    [F4-Router]
-              |               |               |               |
-         [F1-L3sw]      [F2-L3sw]      [F3-L3sw]      [F4-L3sw]
-              |               |               |               |
-         [L2 Switches]  [L2 Switches]  [L2 Switches]  [L2 Switches]
-              |               |               |               |
-          End Devices     End Devices     End Devices     End Devices
-```
-
 ---
 
 ## ⚙️ Configuration Steps
@@ -80,20 +66,20 @@ https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank
 
 ## 🌐 VLAN Design
 
-| VLAN ID | Department | Subnet | Gateway | Branch |
+| VLAN ID | Department | Subnet | Gateway |
 |---------|-----------|--------|---------|--------|
-| VLAN 10 | HR / Mgmt | 192.168.10.0/26 | 192.168.10.1 | F1/F2 |
-| VLAN 20 | Accounts | 192.168.10.64/26 | 192.168.10.65 | F1/F2 |
-| VLAN 30 | Marketing | 192.168.10.128/26 | 192.168.10.129 | F1/F2 |
-| VLAN 40 | Dept 4 | 192.168.10.192/26 | 192.168.10.193 | F1/F2 |
-| VLAN 50 | Dept 5 | 192.168.11.0/26 | 192.168.11.1 | F1/F2 |
-| VLAN 60 | Dept 6 | 192.168.11.64/26 | 192.168.11.65 | F1/F2 |
-| VLAN 70 | Dept 7 | 192.168.11.128/26 | 192.168.11.129 | F3/F4 |
-| VLAN 80 | Dept 8 | 192.168.11.192/26 | 192.168.11.193 | F3/F4 |
-| VLAN 90 | Dept 9 | 192.168.12.0/26 | 192.168.12.1 | F3/F4 |
-| VLAN 100 | Dept 10 | 192.168.12.64/26 | 192.168.12.65 | F3/F4 |
-| VLAN 110 | Dept 11 | 192.168.12.128/26 | 192.168.12.129 | F3/F4 |
-| VLAN 120 | Server Room | 192.168.12.192/26 | 192.168.12.193 | Server Room |
+| VLAN 10 | HR / Mgmt | 192.168.10.0/26 | 192.168.10.1 | 
+| VLAN 20 | Accounts | 192.168.10.64/26 | 192.168.10.65 |
+| VLAN 30 | Marketing | 192.168.10.128/26 | 192.168.10.129 |
+| VLAN 40 | Dept 4 | 192.168.10.192/26 | 192.168.10.193 |
+| VLAN 50 | Dept 5 | 192.168.11.0/26 | 192.168.11.1 |
+| VLAN 60 | Dept 6 | 192.168.11.64/26 | 192.168.11.65 |
+| VLAN 70 | Dept 7 | 192.168.11.128/26 | 192.168.11.129 |
+| VLAN 80 | Dept 8 | 192.168.11.192/26 | 192.168.11.193 |
+| VLAN 90 | Dept 9 | 192.168.12.0/26 | 192.168.12.1 |
+| VLAN 100 | Dept 10 | 192.168.12.64/26 | 192.168.12.65 |
+| VLAN 110 | Dept 11 | 192.168.12.128/26 | 192.168.12.129 |
+| VLAN 120 | Server Room | 192.168.12.192/26 | 192.168.12.193 |
 
 ---
 
@@ -112,25 +98,6 @@ https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank
 `Cisco IOS` `VLANs (802.1Q)` `OSPF` `Inter-VLAN Routing` `DHCP` `SSH` `Subnetting` `Port Security` `Wireless (802.11)` `Static IP Addressing`
 
 ---
-
-## 📁 Repository Structure
-
-```
-enterprise-banking-network/
-├── README.md
-├── packet-tracer/
-│   └── enterprise-banking-network.pkt
-└── screenshots/
-    └── topology.png
-```
-
----
-
-## 🚀 How to Open
-
-1. Install [Cisco Packet Tracer](https://www.netacad.com/courses/packet-tracer)
-2. Clone or download this repository
-3. Open `packet-tracer/enterprise-banking-network.pkt`
 
 ---
 
