@@ -64,26 +64,6 @@ https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank
 
 ---
 
-## 🌐 VLAN Design
-
-| VLAN ID | Department | Subnet | Gateway |
-|---------|-----------|--------|---------|--------|
-| VLAN 10 | HR / Mgmt | 192.168.10.0/26 | 192.168.10.1 | 
-| VLAN 20 | Accounts | 192.168.10.64/26 | 192.168.10.65 |
-| VLAN 30 | Marketing | 192.168.10.128/26 | 192.168.10.129 |
-| VLAN 40 | Dept 4 | 192.168.10.192/26 | 192.168.10.193 |
-| VLAN 50 | Dept 5 | 192.168.11.0/26 | 192.168.11.1 |
-| VLAN 60 | Dept 6 | 192.168.11.64/26 | 192.168.11.65 |
-| VLAN 70 | Dept 7 | 192.168.11.128/26 | 192.168.11.129 |
-| VLAN 80 | Dept 8 | 192.168.11.192/26 | 192.168.11.193 |
-| VLAN 90 | Dept 9 | 192.168.12.0/26 | 192.168.12.1 |
-| VLAN 100 | Dept 10 | 192.168.12.64/26 | 192.168.12.65 |
-| VLAN 110 | Dept 11 | 192.168.12.128/26 | 192.168.12.129 |
-| VLAN 120 | Server Room | 192.168.12.192/26 | 192.168.12.193 |
-
----
-
-
 ## 🔐 Security Features
 
 - **SSH** configured on all routers and L3 switches (Telnet disabled)
