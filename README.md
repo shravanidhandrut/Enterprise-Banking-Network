@@ -75,6 +75,6 @@ https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank
 
 ## 🌐 Technologies Used
 
-`Cisco IOS` `VLANs (802.1Q)` `OSPF` `Inter-VLAN Routing` `DHCP` `SSH` `Subnetting` `Port Security` `Wireless (802.11)` `Static IP Addressing`
+`Cisco Packet Tracer` `VLANs` `OSPF` `Inter-VLAN Routing` `DHCP` `SSH` `Subnetting` `Port Security` `Wireless Connection` `Static IP Addressing`
 
 ---
